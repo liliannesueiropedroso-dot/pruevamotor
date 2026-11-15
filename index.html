@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Mi Proyecto 2D</title>
+  <script src="https://bridge.playgama.com/playgama-bridge.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="nx-root">
+    <div id="nx-stage-wrap"></div>
+    <div id="nx-hud">
+      <div id="nx-score-box" class="hidden">Puntos: <span id="nx-score">0</span></div>
+      <div id="nx-hud-actions">
+        <button type="button" id="nx-pause-btn">Pausa</button>
+        <button type="button" id="nx-fs-btn" title="Pantalla completa" aria-label="Pantalla completa">[ ]</button>
+      </div>
+    </div>
+    <div id="nx-pause-overlay" class="hidden">
+      <div class="nx-modal">
+        <h2>Juego en pausa</h2>
+        <button type="button" id="nx-resume-btn">Continuar</button>
+      </div>
+    </div>
+    
+  <div id="nx-touch-controls" aria-label="Controles táctiles">
+    <div class="nx-dpad">
+      <button type="button" data-key="left" aria-label="Izquierda">&#9664;</button>
+      <button type="button" data-key="up" aria-label="Arriba">&#9650;</button>
+      <button type="button" data-key="down" aria-label="Abajo">&#9660;</button>
+      <button type="button" data-key="right" aria-label="Derecha">&#9654;</button>
+    </div>
+    <button type="button" class="nx-action-btn" data-key="jump" aria-label="Saltar">SALTAR</button>
+  </div>
+  </div>
+
+  <script src="js/pixi.min.js"></script>
+  <script src="js/portal-sdk.js"></script>
+  <script src="js/nexus-runtime.js"></script>
+</body>
+</html>

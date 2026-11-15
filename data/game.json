@@ -1,0 +1,208 @@
+{
+  "engine": "NEXUS GAME ENGINE",
+  "formatVersion": "1.0.0",
+  "portal": "playgama",
+  "name": "Mi Proyecto 2D",
+  "settings": {
+    "width": 1280,
+    "height": 720,
+    "orientation": "horizontal",
+    "backgroundColor": "#131b2e"
+  },
+  "activeSceneId": "scene_82138e0a167d",
+  "scenes": [
+    {
+      "id": "scene_82138e0a167d",
+      "name": "Escena_01",
+      "backgroundColor": "#131b2e",
+      "gridVisible": true,
+      "gridSize": 32,
+      "snapToGrid": false,
+      "objects": [
+        {
+          "id": "obj_481011942d8a",
+          "name": "Circulo_1",
+          "type": "circle",
+          "parentId": null,
+          "visible": true,
+          "locked": false,
+          "opacity": 1,
+          "transform": {
+            "x": 640,
+            "y": 360,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 96,
+            "height": 96,
+            "anchorX": 0.5,
+            "anchorY": 0.5
+          },
+          "components": [],
+          "circle": {
+            "fillColor": "#10b981",
+            "strokeColor": "#6ee7b7",
+            "strokeWidth": 2,
+            "radius": 48
+          }
+        },
+        {
+          "id": "obj_cabd2aa3c34e",
+          "name": "Contenedor_1",
+          "type": "container",
+          "parentId": null,
+          "visible": true,
+          "locked": false,
+          "opacity": 1,
+          "transform": {
+            "x": 640,
+            "y": 360,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 200,
+            "height": 200,
+            "anchorX": 0.5,
+            "anchorY": 0.5
+          },
+          "components": []
+        },
+        {
+          "id": "obj_ba2401290bb2",
+          "name": "Sprite_1",
+          "type": "sprite",
+          "parentId": null,
+          "visible": true,
+          "locked": false,
+          "opacity": 1,
+          "transform": {
+            "x": 375.88,
+            "y": 319.37,
+            "rotation": 0,
+            "scaleX": 1.697,
+            "scaleY": 1.145,
+            "width": 175,
+            "height": 175,
+            "anchorX": 0.5,
+            "anchorY": 0.5
+          },
+          "components": [
+            {
+              "id": "comp_5753f523e674",
+              "type": "player_platformer",
+              "enabled": true,
+              "config": {
+                "speed": 280,
+                "jumpForce": 540,
+                "gravity": 1350
+              }
+            }
+          ],
+          "sprite": {
+            "assetId": "asset_74335bc5d40d",
+            "tint": "#ffffff",
+            "flipX": false,
+            "flipY": false,
+            "animation": {
+              "enabled": true,
+              "cols": 4,
+              "rows": 1,
+              "frameCount": 4,
+              "fps": 8,
+              "loop": true,
+              "playing": true,
+              "linkToMovement": true
+            }
+          }
+        },
+        {
+          "id": "obj_f554d125bbbf",
+          "name": "Rectangulo_1",
+          "type": "rectangle",
+          "parentId": null,
+          "visible": true,
+          "locked": false,
+          "opacity": 1,
+          "transform": {
+            "x": 650.16,
+            "y": 636.83,
+            "rotation": 0,
+            "scaleX": 8.968,
+            "scaleY": 1.265,
+            "width": 160,
+            "height": 96,
+            "anchorX": 0.5,
+            "anchorY": 0.5
+          },
+          "components": [
+            {
+              "id": "cmp_afbd20a5ec36",
+              "type": "solid",
+              "enabled": true,
+              "config": {}
+            }
+          ],
+          "rectangle": {
+            "fillColor": "#3b82f6",
+            "strokeColor": "#93c5fd",
+            "strokeWidth": 2,
+            "cornerRadius": 6
+          }
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "mech_5fe8177a134d",
+          "name": "Nueva regla 1",
+          "enabled": true,
+          "priority": 10,
+          "ownerObjectId": "obj_481011942d8a",
+          "trigger": {
+            "event": "collision.enter",
+            "sourceObjectId": "obj_ba2401290bb2",
+            "target": "obj_481011942d8a"
+          },
+          "conditions": [
+            {
+              "id": "cond_713abe5acbcc",
+              "type": "object.visible",
+              "target": "obj_481011942d8a",
+              "value": true
+            }
+          ],
+          "actions": [
+            {
+              "id": "act_d89257701c9e",
+              "type": "variable.add",
+              "parameters": {
+                "variable": "puntos",
+                "amount": 10
+              }
+            },
+            {
+              "id": "act_732fa8cd4e94",
+              "type": "audio.beep",
+              "parameters": {
+                "preset": "coin",
+                "channel": "sfx"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": [],
+  "assets": [
+    {
+      "id": "asset_74335bc5d40d",
+      "name": "BooxGame_logo_icon_resized",
+      "filename": "BooxGame_logo_icon_resized.png",
+      "mimeType": "image/png",
+      "kind": "image",
+      "width": 175,
+      "height": 175,
+      "path": "assets/asset_74335bc5d40d_BooxGame_logo_icon_resized.png"
+    }
+  ]
+}

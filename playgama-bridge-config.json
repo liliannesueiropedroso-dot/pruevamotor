@@ -1,0 +1,7 @@
+{
+  "name": "Mi Proyecto 2D",
+  "sdk": "playgama-bridge",
+  "engine": "nexus-game-engine",
+  "version": "1.0.0",
+  "orientation": "any"
+}
